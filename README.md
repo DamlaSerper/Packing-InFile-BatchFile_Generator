@@ -1,1 +1,1 @@
-# centrifugal_filtration_DEM_code_generator
+# Centrifugal Filtration LIGGGHTS(R) DEM In. File Generator
