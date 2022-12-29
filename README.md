@@ -1,1 +1,1 @@
-# INNN - Application specific LIGGGHTS(R) DEM in.file generator (for vertical centrifugal filters)
+# INNN - Application specific LIGGGHTS® DEM in.file generator (for vertical centrifugal filters, based on MATLAB®)
