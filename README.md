@@ -1,1 +1,1 @@
-# Centrifugal Filtration LIGGGHTS(R) DEM In. File Generator
+# INNNN - Application specific LIGGGHTS(R) DEM in.file generator (for vertical centrifugal filters)
