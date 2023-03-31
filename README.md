@@ -19,6 +19,7 @@ The function creates the packing and writes the information related to location 
 This function also has the option to calculate the DEM simulation timestep based on algorithm described in  https://doi.org/10.1002/nme.6056, if not already provided one. 
 
 ### The function takes the arguments below (units are in SI unless otherwise stated):
+
 - **time_int:** *value in seconds* - How often to create dump files
 - **calc:** *"yes", "no"* - Yes enables calculation of DEM timestep, while no results in critical timestep calculation from delta_tc_init
 - **delta_tc_init:** *0, positive value* - 0 for calculating the timestep, value for using the previously calculated critical timestep
@@ -45,6 +46,7 @@ This function also has the option to calculate the DEM simulation timestep based
 - **safety_factor_ts:** *value between 0 and 1* - Safety margin used in critical timestep calculations
 
 ### Function returns the arguments below:
+
 - **safe_timestep:** *positive number* - Safe timstep of DEM simulation to be set-up including the safety factor
 - **t_c/nu_steps_in_sec:** *positive integer value* - Number of steps in a second based on safe timestep
 - **nu_sph_vec:** *positive integer value* - Number of particles generated in the cylindircal inlet pipe
@@ -53,6 +55,22 @@ This function also has the option to calculate the DEM simulation timestep based
 
 ## INNN.mlx
 
+This script includes options for generating:
+
+- in file for LIGGGHTS-PUBLIC
+- batch file for batch job submission on supercomputer
+- replicas
+- cases with "mesh", mesh_free ("prim", SCM), or combination ("both") boundary representations
+- cases with optional force switching (tangential Hertzian contact force, DEMPhysics gravitational force, bouyant force, DEMPhysics centrifugal force, DEMPhysics drag force (inactive currently), cohesive force (sjkr))
+- cases with optional "mesh" or "prim" geometries and optional rotational speed
+
+This script also copies and moves all the relevant files from the main directory to required folders.
+
+By adjusting **transition fraction**, one can one or multiple parallel run cases based on first initial critical timestep calculation and dump file generation. For example [0] means "mesh" boundary representation, while [0 0.2 0.5] means ("both") we will have three cases one being "mesh" and other being "prim" with different transition ratios. The primitive cases will use the same dump file that was generated at "mesh" case. For further information on these primitives and transition ratios check SCM documentation.
+
+In this file, every replica case can be given a different supercomputer project number to ease of handling.
+
+For further details, check the source code and the supplied links.
 
 
 
