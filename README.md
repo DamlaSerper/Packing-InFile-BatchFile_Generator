@@ -20,36 +20,36 @@ This function also has the option to calculate the DEM simulation timestep based
 
 ### The function takes the arguments below (units are in SI unless otherwise stated):
 - **time_int:** *value in seconds* - How often to create dump files
-- calc: "yes", "no" - Yes enables calculation of DEM timestep, while no results in critical timestep calculation from delta_tc_init
-- delta_tc_init: 0, positive value - 0 for calculating the timestep, value for using the previously calculated critical timestep
-- time: value in seconds - How many of the seconds to print out as dump files
-- Boundary: "mesh", "prim", "both" - This is required for generating the correct folder name for each case
-- prob_sph: [Par_prob_1 Par_prob_2 Par_prob_3 Par_prob_4] - Variable row vector containing probability of each particle size class
-- r_sph: [Par_rad_1 Par_rad_2 Par_rad_3 Par_rad_4] - Variable row vector containing raidus of each size class
-- size_mult: positive integer value - The size multiplier used for scaling the particle sizes
-- pipe_filling: value between 0 and 1 - This signifies how much of the supplied pipe is filled
-- dummy_liquid_ratio: value between 0 and 1 - The ratio of liquid compared to reality, this is useful for creating denser packings
-- vol_suspension: positive value - The volume of suspension
-- weightfrac_sph: value between 0 and 1 - The ratio of solid weigth and total suspension weight
-- rho_sph: positive value - Density of the solids
-- rho_liq: positive value - Density of the fluid
-- total_feeding_time: value in seconds - Length of feeding period
-- r_cyl: positive value - Feeding pipe radius
-- cyl_lower_coor: positive or negative value - Lower coordinate of the feeding pipe
-- box_bounds: [x_lo x_hi; y_lo y_hi; z_lo z_hi] - Matrix that is containing the x, y and z bounds of the DEM simulation domain
-- youngs_mod: positive value - Young's modulus of solids
-- poissons_rat: positive value - Poisson's ratio of solids
-- coeff_rest: positive value - Coefficient of restituation of solids in liquid
-- rpm: positive value - Rotation speed of the centrifugal filter inner basket (in rounds per minute)
-- r_basket_in: positive value - Radius of the centrifugal filter inner basket
-- safety_factor_ts: value between 0 and 1 - Safety margin used in critical timestep calculations
+- **calc:** *"yes", "no"* - Yes enables calculation of DEM timestep, while no results in critical timestep calculation from delta_tc_init
+- **delta_tc_init:** *0, positive value* - 0 for calculating the timestep, value for using the previously calculated critical timestep
+- **time:** *value in seconds* - How many of the seconds to print out as dump files
+- **Boundary:** *"mesh", "prim", "both"*- This is required for generating the correct folder name for each case
+- **prob_sph:** *[Par_prob_1 Par_prob_2 Par_prob_3 Par_prob_4]* - Variable row vector containing probability of each particle size class
+- **r_sph:** *[Par_rad_1 Par_rad_2 Par_rad_3 Par_rad_4]* - Variable row vector containing raidus of each size class
+- **size_mult:** *positive integer value* - The size multiplier used for scaling the particle sizes
+- **pipe_filling:** *value between 0 and 1* - This signifies how much of the supplied pipe is filled
+- **dummy_liquid_ratio:** *value between 0 and 1* - The ratio of liquid compared to reality, this is useful for creating denser packings
+- **vol_suspension:** *positive value* - The volume of suspension
+- **weightfrac_sph:** *value between 0 and 1* - The ratio of solid weigth and total suspension weight
+- **rho_sph:** *positive value* - Density of the solids
+- **rho_liq:** *positive value* - Density of the fluid
+- **total_feeding_time:** *value in seconds* - Length of feeding period
+- **r_cyl:** *positive value* - Feeding pipe radius
+- **cyl_lower_coor:** *positive or negative value* - Lower coordinate of the feeding pipe
+- **box_bounds:** *[x_lo x_hi; y_lo y_hi; z_lo z_hi]* - Matrix that is containing the x, y and z bounds of the DEM simulation domain
+- **youngs_mod:** *positive value* - Young's modulus of solids
+- **poissons_rat:** *positive value* - Poisson's ratio of solids
+- **coeff_rest:** *positive value* - Coefficient of restituation of solids in liquid
+- **rpm:** *positive value* - Rotation speed of the centrifugal filter inner basket (in rounds per minute)
+- **r_basket_in:** *positive value* - Radius of the centrifugal filter inner basket
+- **safety_factor_ts:** *value between 0 and 1* - Safety margin used in critical timestep calculations
 
 ### Function returns the arguments below:
-- safe_timestep: positive number - Safe timstep of DEM simulation to be set-up including the safety factor
-- t_c/nu_steps_in_sec: positive integer value - Number of steps in a second based on safe timestep
-- nu_sph_vec: positive integer value - Number of particles generated in the cylindircal inlet pipe
-- dummy_velocity_of_fluid: positive or negative value - Calculated velocity of the modified fluid
-- vy_p: positive or negative value - y velocity of particles
+- **safe_timestep:** *positive number* - Safe timstep of DEM simulation to be set-up including the safety factor
+- **t_c/nu_steps_in_sec:** *positive integer value* - Number of steps in a second based on safe timestep
+- **nu_sph_vec:** *positive integer value* - Number of particles generated in the cylindircal inlet pipe
+- **dummy_velocity_of_fluid:** *positive or negative value* - Calculated velocity of the modified fluid
+- **vy_p:** *positive or negative value* - y velocity of particles
 
 ## INNN.mlx
 
