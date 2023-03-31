@@ -19,7 +19,7 @@ The function creates the packing and writes the information related to location 
 This function also has the option to calculate the DEM simulation timestep based on algorithm described in  https://doi.org/10.1002/nme.6056, if not already provided one. 
 
 ### The function takes the arguments below (units are in SI unless otherwise stated):
-- **time_int:** value in seconds - How often to create dump files
+- **time_int:** *value in seconds* - How often to create dump files
 - calc: "yes", "no" - Yes enables calculation of DEM timestep, while no results in critical timestep calculation from delta_tc_init
 - delta_tc_init: 0, positive value - 0 for calculating the timestep, value for using the previously calculated critical timestep
 - time: value in seconds - How many of the seconds to print out as dump files
