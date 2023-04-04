@@ -3,9 +3,8 @@
 This repository consists of two MATLAB scripts, PACCCK.mlx (function) and INNN.mlx, which are both written in MATLAB. PACCCK.mlx calculates critical DEM timestep and generates a non-overlapping packing of four size groups of particles within a cylindirical pipe. INNN.mlx generates LIGGGHTS script files (.in), batch files, replica cases and moves generated files to correct folders. These scripts are specific to case (cake formation in a vertical centrifugal filter) described in article and includes new primitives and physics from https://github.com/DamlaSerper/SCM and https://github.com/DamlaSerper/DEMPhysics.
 
 ## Contributing Authors
-MSc. Damla Serper (Aalto Univeristy, Finland) **corresponding**
-
-Dr. Kevin Hanley (University of Edinburgh, UK)
+- MSc. Damla Serper (Aalto Univeristy, Finland) *corresponding author*
+- Dr. Kevin Hanley (University of Edinburgh, UK)
 
 ## PACCCK.mlx
 
